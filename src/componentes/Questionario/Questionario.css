@@ -1,0 +1,56 @@
+.questionario 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.questionario-titulo
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.questionario-radio
+{
+    padding-bottom: 2em;
+    color: dimgray;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.questionario form
+{
+    max-width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 30px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 480px) 
+{
+    .questionario 
+    {
+        margin: 100px 0;
+    }
+
+
+    .questionario-titulo
+    {
+        font-size: 1em;
+    }
+
+    .questionario-subtitulo
+    {
+        font-size: 1em;
+    }
+
+    .questionario form
+    {
+        padding: 10px 10px;
+    }
+}

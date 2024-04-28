@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "question": "Sua opinião sobre a capacidade de resolução dos problemas?",
+      "options": [
+        "Muito satisfeito",
+        "Satisfeito",
+        "Insatisfeito",
+        "Muito insatisfeito"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Sua opinião sobre o tempo para resolução dos problemas?",
+      "options": [
+        "Muito satisfeito",
+        "Satisfeito",
+        "Insatisfeito",
+        "Muito insatisfeito"
+      ]
+    },
+    {
+        "id": 3,
+        "question": "Cortesia no atendimento?",
+        "options": [
+          "Muito satisfeito",
+          "Satisfeito",
+          "Insatisfeito",
+          "Muito insatisfeito"
+        ]
+    },
+    {
+        "id": 4,
+        "question": "Clareza na comunicação?",
+        "options": [
+          "Muito satisfeito",
+          "Satisfeito",
+          "Insatisfeito",
+          "Muito insatisfeito"
+        ]
+    }
+]
+  

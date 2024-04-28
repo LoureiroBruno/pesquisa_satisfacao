@@ -1,0 +1,19 @@
+.banner {
+    text-align: center;
+}
+
+.banner img  {
+    max-width: 100%;
+}
+
+@media (min-width: 1280px) {
+    .banner img {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .banner img {
+        max-width: 100%;
+    }
+}

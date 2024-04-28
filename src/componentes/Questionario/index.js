@@ -60,9 +60,15 @@ function Questionario() {
         const currentQuestionData = questionsData.find(question => question.id === currentQuestion);
         if (!currentQuestionData) return null;
     
+        const contagemDeQuestoes = currentQuestionData.id + 'ª do total de ' + totalPerguntas + 'ª'
+
         return (
             <div id={`question${currentQuestion}`}>
-                <button className='questionario-titulo btn-primary'> {currentQuestionData.id} / {totalPerguntas}</button>
+                <Tooltip title={contagemDeQuestoes} position="right" trigger="mouseenter">
+                    <button className='questionario-titulo btn btn-outline-danger'> 
+                        {currentQuestionData.id} | {totalPerguntas}
+                    </button>
+                </Tooltip>
                 <h1 className='mt-2'> {currentQuestionData.id} - {currentQuestionData.question}</h1>
                 <div className='pb-5 fs-5'>
                     {currentQuestionData.options.map((option, index) => (
@@ -105,8 +111,6 @@ function Questionario() {
         setClicadoConcluir(true); // Atualizar o estado quando o botão "Concluir" for clicado
     };
 
-   
-
     const renderButtonTextTitle = () => {
         return currentQuestion === totalPerguntas ? 'Clique para concluir' : 'Clique para proseguir';  
     };
@@ -114,14 +118,24 @@ function Questionario() {
     const renderButtonText = () => {
         return currentQuestion === totalPerguntas ? 'Concluir' : 'Próxima pergunta';
     };
+
+    const iconeFontAwsome = () => {
+        return currentQuestion === totalPerguntas ? "fa-solid fa-check" : "fa-solid fa-forward";
+    };
     
+    // `iconeFontAwsome` retorne uma string, não uma função
+    const icone = iconeFontAwsome(); 
+
     return (
         <section className='questionario'>
             <form className="text-center pt-3" onSubmit={handleFormSubmit}>
                 {renderQuestion()}
                 {currentQuestion <= totalPerguntas && (
                     <Tooltip title={renderButtonTextTitle()} position="right" trigger="mouseenter">
-                        <button type="submit" className='btn btn-success btn-lg' onClick={podeAvancar ? (currentQuestion === totalPerguntas ? handleConcluirClick : nextQuestion) : null} disabled={!podeAvancar}>{renderButtonText()}</button>
+                        <button type="submit" className='btn btn-success btn-lg' 
+                            onClick={podeAvancar ? (currentQuestion === totalPerguntas ? handleConcluirClick : nextQuestion) : null} disabled={!podeAvancar}>
+                           <i className={icone}></i> {renderButtonText()}
+                        </button>
                     </Tooltip>
                 )}
             </form>

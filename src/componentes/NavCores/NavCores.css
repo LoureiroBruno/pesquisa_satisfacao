@@ -1,0 +1,12 @@
+.linhaColorida 
+{
+  margin-top: 1.5em;
+  height: 0.3em;
+  background: linear-gradient(to right, 
+    green,
+    rgba(0, 128, 0, 0.5),
+    orange,
+    red
+   
+  ); /* Gradiente de cores do arco-íris */
+}

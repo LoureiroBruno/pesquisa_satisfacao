@@ -29,7 +29,7 @@ const Formulario = () => {
             </span>
           </Tooltip>
           </div>
-          <h1 className='formulario-titulo'>Pesquisa de Avaliação do Serviço da GETIC</h1>
+          <h1 className='formulario-titulo'>Pesquisa de satisfação do serviço da GETIC</h1>
           <h2 className='formulario-subtitulo pb-5 fs-5'>Por favor, avalie cada item a seguir, selecionando a opção que melhor descreve sua experiência.</h2>
           <Tooltip title="Clique para iniciar pesquisa" position="right" trigger="mouseenter">
             <button className='btn btn-success btn-lg' type="submit">
